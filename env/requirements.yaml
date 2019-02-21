@@ -1,0 +1,12 @@
+dependencies:
+- alias: tekton
+  name: knative-build-pipeline
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.14
+- alias: prow
+  name: prow
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.187
+- name: jenkins-x-platform
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.3402
