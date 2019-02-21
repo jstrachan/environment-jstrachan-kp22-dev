@@ -10,7 +10,57 @@ jenkins-x-platform:
               "staging-k8s.gcr.io": "gcloud"
           }
       }
+  jenkins-x-platform:
+    PipelineSecrets:
+      DockerConfig: |-
+        {
+            "credHelpers": {
+                "gcr.io": "gcloud",
+                "us.gcr.io": "gcloud",
+                "eu.gcr.io": "gcloud",
+                "asia.gcr.io": "gcloud",
+                "staging-k8s.gcr.io": "gcloud"
+            }
+        }
+    jenkins-x-platform:
+      PipelineSecrets:
+        DockerConfig: |-
+          {
+              "credHelpers": {
+                  "gcr.io": "gcloud",
+                  "us.gcr.io": "gcloud",
+                  "eu.gcr.io": "gcloud",
+                  "asia.gcr.io": "gcloud",
+                  "staging-k8s.gcr.io": "gcloud"
+              }
+          }
+      postinstalljob:
+        enabled: "true"
+    postinstalljob:
+      enabled: "true"
+    prow:
+      build:
+        auth:
+          git:
+            username: jstrachan@cloudbees.com
+      tillerNamespace: ""
+    tekton:
+      build:
+        auth:
+          git:
+            username: jstrachan@cloudbees.com
+      tillerNamespace: ""
   postinstalljob:
     enabled: "true"
-  prow: {}
-  tekton: {}
+  prow:
+    build:
+      auth:
+        git:
+          username: jstrachan@cloudbees.com
+    tillerNamespace: ""
+  tekton:
+    build:
+      auth:
+        git:
+          username: jstrachan@cloudbees.com
+    tillerNamespace: ""

@@ -28,7 +28,7 @@ spec:
     kubeProvider: gke
     pipelineUsername: jstrachan
     promotionEngine: Prow
-    prowEngine: BuildPipeline
+    prowEngine: Tekton
     quickstartLocations:
     - excludes:
       - WIP-*

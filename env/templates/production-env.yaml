@@ -13,6 +13,6 @@ spec:
   promotionStrategy: Manual
   source:
     ref: master
-    url: https://github.com/jstrachan/environment-jstrachan-kp22-production.git
+    url: https://github.com/jstrachan/environment-jstrachan-kp24-production.git
   teamSettings: {}
 status: {}
